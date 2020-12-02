@@ -1,0 +1,18 @@
+---
+
+- hosts: localhost
+  become: true
+  tasks:
+
+  - name: Install Apache
+    apt: name=apache2
+
+  - name: Start the apache2 services
+    service:
+      name: apache2
+      state: started
+
+  - name: Copy index.html
+    copy:
+      src: index.html
+      dest: /var/www/html/index.html
