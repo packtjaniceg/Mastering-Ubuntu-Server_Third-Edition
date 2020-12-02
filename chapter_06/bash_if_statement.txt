@@ -1,0 +1,9 @@
+#!/bin/bash
+
+myvar=10
+
+if [ $myvar -eq 1]; then
+    echo "The variable equals 1"
+else
+    echo "The variable doesn't equal 1"
+fi
